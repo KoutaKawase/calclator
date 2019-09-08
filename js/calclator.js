@@ -5,8 +5,12 @@ window.onload = function () {
     const buttons = document.getElementsByClassName('num-key');
     //インプットスクリーン取得
     const screen = document.getElementById('calclator-screen');
-    //押された数字格納用
-    let choicedNumber = 0;
+    //演算子ボタン取得
+    const operatorButtons = document.getElementsByClassName('operator');
+    //押された数字と演算子格納用
+    let choicedNumber;
+    let choicedOperator;
+
 
     //全ての数字ボタンにクリック時の挙動設定
     for (let i = 0; i < buttons.length; i++) {
@@ -22,4 +26,15 @@ window.onload = function () {
             }
         }
     }
+
+    //全ての演算子ボタンにオンクリック設定
+    for (let i = 0; i < operatorButtons.length; i++) {
+        operatorButtons[i].onclick = function () {
+            //演算子取得
+            choicedOperator = operatorButtons[i].getAttribute('value');
+            //取得した演算子をスクリーンに出力
+            screen.value += choicedOperator;
+        }
+    }
+
 }

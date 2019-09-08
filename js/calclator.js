@@ -11,6 +11,8 @@ window.onload = function () {
     const allClearButonn = document.getElementById('all-clear');
     //小数点ボタン取得
     const decimalButton = document.getElementById('decimal');
+    //イコールボタン取得
+    const equalButton = document.getElementById('equal-sign');
     //押された数字と演算子格納用
     let choicedNumber;
     let choicedOperator;
@@ -46,6 +48,7 @@ window.onload = function () {
         screen.value = '0';
     }
 
+
     //小数点ボタンが押されたらスクリーンに表示
     decimalButton.onclick = function () {
         //スクリーンの最後の文字を数値で取得
@@ -57,5 +60,20 @@ window.onload = function () {
         } else {
             alert('小数点を連続では打てません！');
         }
+    }
+
+    //イコールボタンが押されたら計算して表示
+    equalButton.onclick = function () {
+        //スクリーンの文字を取得
+        const calcString = screen.value;
+        //計算結果を取得
+        const result = eval(calcString);
+        //スクリーンに出力
+        screen.value = result;
+        // console.log(calcString);
+        // //演算子で分割して配列にする
+        // const separators = ['\\\+', '-', '\\*', '/'];
+        // const operandNumbers = calcString.split(new RegExp(separators.join('|'), 'g'));
+
     }
 }

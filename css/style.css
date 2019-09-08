@@ -18,7 +18,7 @@ div {
     width: 400px;
 }
 
-.calclator-screen {
+#calclator-screen {
     width: 100%;
     font-size: 5rem;
     height: 80px;
@@ -40,7 +40,7 @@ div {
 button {
     height: 60px;
     background-color: #fff;
-    border-radius: 3px;
+    border-radius: 80px;
     border: 1px solid #c4c4c4;
     background-color: transparent;
     font-size: 2rem;

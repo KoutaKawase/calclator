@@ -69,7 +69,7 @@ button:hover {
     background-color: #f17377;
 }
 
-.equal-sign {
+#equal-sign {
     background-color: #2e86c0;
     border-color: #337cac;
     color: #fff;
@@ -80,6 +80,6 @@ button:hover {
     grid-column-end: 5;
 }
 
-.equal-sign:hover {
+#equal-sign:hover {
     background-color: #4e9ed4;
 }

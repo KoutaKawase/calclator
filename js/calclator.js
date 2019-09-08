@@ -7,6 +7,8 @@ window.onload = function () {
     const screen = document.getElementById('calclator-screen');
     //演算子ボタン取得
     const operatorButtons = document.getElementsByClassName('operator');
+    //ACボタン取得
+    const allClearButonn = document.getElementById('all-clear');
     //押された数字と演算子格納用
     let choicedNumber;
     let choicedOperator;
@@ -35,6 +37,11 @@ window.onload = function () {
             //取得した演算子をスクリーンに出力
             screen.value += choicedOperator;
         }
+    }
+
+    //ACが押されたら全て消す
+    allClearButonn.onclick = function () {
+        screen.value = '0';
     }
 
 }

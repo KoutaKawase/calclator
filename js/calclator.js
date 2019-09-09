@@ -66,6 +66,12 @@ window.onload = function () {
     equalButton.onclick = function () {
         //スクリーンの文字を取得
         const calcString = screen.value;
+        //0除算が含まれていたら中止
+        if (calcString.includes('/0')) {
+            alert('0除算はできません！');
+            screen.value = '0';
+            return;
+        }
         //計算結果を取得
         const result = eval(calcString);
         //スクリーンに出力
